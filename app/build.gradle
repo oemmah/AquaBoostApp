@@ -1,0 +1,104 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+}
+
+android {
+    namespace 'com.example.aquaboost'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId "com.example.aquaboost"
+        minSdk 29
+        targetSdk 35
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
+
+        ndk {
+            abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
+        }
+        aaptOptions {
+            noCompress "tflite"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    configurations {
+        all {
+            // Exclude duplicate modules
+            exclude group: 'org.tensorflow', module: 'tensorflow-lite-metadata'
+            exclude group: 'androidx.lifecycle', module: 'lifecycle-viewmodel-ktx'
+        }
+    }
+}
+
+dependencies {
+    // Android Core
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    // Material Design (single version)
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation libs.activity
+
+    // Navigation Components
+    def nav_version = "2.6.0"
+    implementation "androidx.navigation:navigation-fragment:$nav_version"
+    implementation "androidx.navigation:navigation-ui:$nav_version"
+
+    // Firebase (using BoM to avoid version conflicts)
+    implementation platform('com.google.firebase:firebase-bom:32.2.3')
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-auth'
+    implementation 'com.google.firebase:firebase-firestore'
+
+    // Add the BoM for Firebase products
+    implementation(platform("com.google.firebase:firebase-bom:33.1.2"))
+
+    // Add the dependency for the Firebase Realtime Database
+    implementation("com.google.firebase:firebase-database")
+
+    // If you are also using Firebase Authentication (as seen in your HomeFragment.java)
+    // make sure you have this dependency as well
+    implementation("com.google.firebase:firebase-auth")
+
+
+    // TensorFlow Lite (explicit versions)
+    implementation 'org.tensorflow:tensorflow-lite:2.12.0' // or latest
+    implementation ('org.tensorflow:tensorflow-lite-support:0.4.4')
+
+    // Chart library
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+
+    // Splash Screen
+    implementation 'androidx.core:core-splashscreen:1.0.1'
+
+    // Testing
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    // Debugging
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.12'
+
+
+}

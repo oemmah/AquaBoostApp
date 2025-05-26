@@ -1,0 +1,37 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Main App Theme -->
+    <style name="Theme.AquaBoost" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary colors -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryDark</item>
+        <item name="colorOnPrimary">@color/colorPrimaryDark</item>
+
+        <!-- Secondary (accent) colors -->
+        <item name="colorSecondary">@color/colorAccent</item>
+        <item name="colorOnSecondary">@color/colorPrimaryDark</item>
+
+        <!-- Background -->
+        <item name="android:windowBackground">@color/backgroundLight</item>
+        <item name="colorAccent">@color/backgroundLight</item>
+
+        <!-- Text -->
+        <item name="android:textColorPrimary">#000000</item>
+    </style>
+
+    <!-- Splash Screen Theme -->
+    <!-- Only use postSplashScreenTheme for API 31+ via tools:targetApi -->
+    <style name="Theme.AquaBoost.Splash" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_background</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/logo</item>
+        <item name="android:windowSplashScreenIconBackgroundColor">@color/splash_color</item>
+        <item name="postSplashScreenTheme">@style/Theme.AquaBoost</item>
+        <item name="android:statusBarColor" tools:targetApi="31">@android:color/transparent</item>
+    </style>
+    <style name="RoundedImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+
+</resources>

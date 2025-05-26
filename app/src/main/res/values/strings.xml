@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">AquaBoost</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string-array name="activity_types">
+        <item>Inactive</item>
+        <item>Active</item>
+        <item>Very Active</item>
+    </string-array>
+    <string name="logout_title">Logout</string>
+    <string name="logout_confirmation">Are you sure you want to logout?</string>
+    <string name="yes">Yes</string>
+    <string name="cancel">Cancel</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="notification_title">Hydration Reminder</string>
+    <string name="notification_message">Time to drink some water! 💧</string>
+</resources>

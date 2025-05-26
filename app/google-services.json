@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "184166082909",
+    "firebase_url": "https://aquaboost-8fada-default-rtdb.firebaseio.com",
+    "project_id": "aquaboost-8fada",
+    "storage_bucket": "aquaboost-8fada.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:184166082909:android:201c1976fe4db862f320b4",
+        "android_client_info": {
+          "package_name": "com.example.aquaboost"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "184166082909-c8n9f36dduddq39qs56mk6g0fvs6lue8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMKiNjsm0q9S25k5t27qori12lLOwuZWE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "184166082909-c8n9f36dduddq39qs56mk6g0fvs6lue8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:184166082909:android:a20b06225933e184f320b4",
+        "android_client_info": {
+          "package_name": "com.example.aquaboost.debug"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "184166082909-c8n9f36dduddq39qs56mk6g0fvs6lue8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMKiNjsm0q9S25k5t27qori12lLOwuZWE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "184166082909-c8n9f36dduddq39qs56mk6g0fvs6lue8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
